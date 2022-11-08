@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg: hsl(225, 100%, 94%);
+    --button-clr: hsl(245, 75%, 52%);
+    --subscription-bg: hsl(225, 100%, 98%);
+    --text-clr: hsl(224, 23%, 55%);
+    --title-clr: hsl(223, 47%, 23%);
+}
+
+body{
+    background-color: var(--main-bg);
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+main{
+    width: 375px;
+    max-width: 375px;
+    margin: 2rem auto;
+    background-color: #fff;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.hero-image svg{
+    display: block;
+}
+.content{
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+.content h1{
+    font-size: 1.4em;
+    font-weight: 900;
+    color: var(--title-clr);
+}
+.content p{
+    color: var(--text-clr);
+}
+.main{
+    margin: 1rem 0;
+}
+.subscription{
+    background: var(--subscription-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: .9em;
+}
+.subscription svg{
+    grid-column: 1 / 2;
+}
+.subscription .plan{
+    text-align: left;
+    grid-column: 2 / 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.subscription .bold{
+    font-weight: 900;
+    color: #000;
+}
+.subscription a {
+    grid-column: 4 / 5;
+    font-weight: 900;
+
+    display: flex;
+    align-items: center;
+}
+.subscription a:hover{
+    color: #9A7BC2;
+    text-decoration: none;
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0;
+}
+button{
+    background-color: var(--button-clr);
+    color: #fff;
+    font-weight: 900;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    border: 0;
+    font-size: .95rem;
+    box-shadow: 1px 5px 30px #9A7BC2;
+    cursor: pointer;
+}
+button:hover{
+background-color: #9A7BC2;
+}
+.btns a{
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--text-clr);
+}
+
+.btns a:hover{
+    color: #000;
+}
